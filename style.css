@@ -1,0 +1,357 @@
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+    }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+    html {
+        font-size: 58%;
+    }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+    html {
+        font-size: 55%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 200;
+    line-height: 1.4;
+    color: var(--main-white);
+    overflow-x: hidden;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #be3144;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    height: 4rem;
+    align-items: center;
+}
+
+a {
+    /* display: block; */
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+@media (max-width: 28.75em) {
+    .nav {
+        justify-content: center;
+        position: fixed;
+    }
+
+    .nav-list {
+        margin: 0 1rem;
+    }
+
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Welcome Section */
+.welcome-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .welcome-sec {
+        flex-direction: column;
+        /* Change to a horizontal layout for smaller screens */
+        height: 100vh;
+        width: 100%;
+        /* Allow the section to grow with its content */
+        padding: 20px;
+        /* Add some spacing between the content and the edges of the section */
+    }
+}
+
+@media screen and (min-width: 60px) {
+    .welcome-sec {
+        flex-direction: column;
+        /* Change to a horizontal layout for smaller screens */
+        height: 100vh;
+        width: 100%;
+        /* Allow the section to grow with its content */
+        padding: 20px;
+        /* Add some spacing between the content and the edges of the section */
+    }
+
+
+}
+
+.welcome-sec>p {
+    font-size: 1.5rem;
+    font-weight: 200;
+    font-style: italic;
+    color: #be3144;
+}
+
+h1,
+h2 {
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.mimclass {
+    font-size: 4rem;
+}
+
+.webclass {
+    font-size: 2.5rem;
+    font-style: italic;
+}
+
+/* Projects Section */
+.projects-section {
+    text-align: center;
+    padding: 10rem 2rem;
+    background-color: #45567d;
+    width: 100%;
+}
+
+@media (min-width: 28.75em) {
+    .projects-section-header {
+        font-size: 2rem;
+    }
+}
+
+.projects-section-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid var(--main-white);
+    color: white;
+    font-size: 2.8rem;
+    border-bottom: 2px solid #ffffff;
+    /* Adjust the color and thickness as desired */
+    padding-bottom: 5px;
+}
+
+/* Project Grid */
+@media (max-width: 30.625em) {
+    .projects-section {
+        padding: 4rem 1rem;
+        align-items: center;
+        padding-right: 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        padding-right: 2rem;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 100px);
+        /* Change the number of columns for smaller screens */
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .projects-grid {
+        grid-template-columns: 100px;
+        /* Single column for even smaller screens */
+    }
+}
+
+.projects-section {
+    text-align: center;
+    padding: 10rem 2rem;
+    background: #45567d;
+}
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+.project {
+    background: #303841;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+
+
+
+.code {
+    color: #303841;
+    transition: color 0.3s ease-out;
+}
+
+.project:hover .code {
+    color: #ff7f50;
+}
+
+.project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.project-title {
+    font-size: 1.3rem;
+    padding: 1.5rem 0.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
+
+.btn-show-all {
+    font-size: 1.3rem;
+    background: #303841;
+    transition: 0.3s ease-out;
+}
+
+.btn-show-all:hover {
+    background: rgb(209, 62, 62);
+}
+
+.btn-show-all:hover>i {
+    transform: translateX(2px);
+}
+
+.btn-show-all>i {
+    margin-left: 10px;
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+}
+
+/* Contact section */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background: #303841;
+    color: white;
+}
+
+.contact-section-header>h2 {
+    font-size: 3rem;
+}
+
+@media (max-width: 28.75em) {
+    .contact-section-header>h2 {
+        font-size: 3rem;
+    }
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-details {
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+    transform: translateY(8px);
+}
+
+/* Footer  */
+footer {
+    font-weight: 200;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 2rem;
+    background: #303841;
+    border-top: 4px solid #be3144;
+    color: white;
+    text-align: end;
+}
+
+.foot {
+    font-size: 1.2rem;
+    font-weight: 100;
+    /* margin-left: 3rem; */
+    /* padding-left: 3rem; */
+}
+
+.footele {
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+footer>p {
+    margin: 1rem;
+}
+
+footer i {
+    vertical-align: middle;
+}
+
+@media (max-width: 28.75em) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
